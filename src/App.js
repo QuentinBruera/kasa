@@ -1,14 +1,10 @@
 // Importation de react
 import React from "react";
-
 // Importation de la librairie pour les routes
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Imporation de ma data
 import data from "./data/logements.json";
-
-// Imporation du style fait par sass
-import "./styles/index.scss";
 
 // Importation des pages
 import Error from "./pages/Error";

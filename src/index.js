@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/index.scss";
+
+// Imporation du style fait par sass
+import "./styles/Style.css";
 
 import App from "./App";
 
