@@ -1,0 +1,14 @@
+@use "../1-utils/variables" as v;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+/* font-family: 'Montserrat', sans-serif; */
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+p {
+    color: red;
+    font-size: 20px;
+}

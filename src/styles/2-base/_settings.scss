@@ -1,0 +1,19 @@
+@use "../1-utils/variables" as v;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    // border: solid black 1px;
+}
+body {
+    // width: 75%;
+    width: 1240px;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+    color: v.$color-black;
+}
+ul {
+    list-style-type: none;
+}
