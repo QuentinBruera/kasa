@@ -21,7 +21,7 @@ const Header = () => {
                     <li className="header__nav__ul__li">
                         <a
                             className="header__nav__ul__li__a"
-                            href="http://localhost:3000/propos"
+                            href="http://localhost:3000/a-propos"
                         >
                             A Propos
                         </a>

@@ -6,7 +6,7 @@ const BannerHome = () => {
             <img
                 className="bannerHome__img"
                 src="./assets/home-banner.jpg"
-                alt=""
+                alt="Kasa banner"
             />
             <h1 className="bannerHome__title">
                 Chez vous, partout et ailleurs
