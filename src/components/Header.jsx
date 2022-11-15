@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 import color from "../styles/color";
@@ -9,16 +10,29 @@ const Header = () => {
             <Logo src="./assets/Logo-rouge.svg" alt="Logo de Kasa" />
             <Navigation>
                 <NavigationUl>
-                    <NavigationLi>
-                        <NavigationAnchor href="http://localhost:3000/">
-                            Accueil
-                        </NavigationAnchor>
-                    </NavigationLi>
-                    <NavigationLi>
-                        <NavigationAnchor href="http://localhost:3000/a-propos">
-                            A Propos
-                        </NavigationAnchor>
-                    </NavigationLi>
+                    <NavLink
+                        to="/"
+                        className={(nav) => (nav.isActive ? "nav-active" : "")}
+                        style={({ isActive }) => ({
+                            textDecoration: isActive ? "underline" : "none",
+                            color: color.primary,
+                            fontSize: "24px",
+                            marginLeft: "57px",
+                        })}
+                    >
+                        <NavigationLi>Accueil</NavigationLi>
+                    </NavLink>
+                    <NavLink
+                        to="/a-propos"
+                        style={({ isActive }) => ({
+                            textDecoration: isActive ? "underline" : "none",
+                            color: color.primary,
+                            fontSize: "24px",
+                            marginLeft: "57px",
+                        })}
+                    >
+                        <NavigationLi>A Propos</NavigationLi>
+                    </NavLink>
                 </NavigationUl>
             </Navigation>
         </HeaderContainer>
@@ -46,11 +60,4 @@ const NavigationUl = styled.ul`
     display: flex;
 `;
 
-const NavigationLi = styled.li`
-    margin-left: 57px;
-`;
-
-const NavigationAnchor = styled.a`
-    color: ${color.primary};
-    font-size: 24px;
-`;
+const NavigationLi = styled.li``;

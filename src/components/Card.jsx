@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 import color from "../styles/color";
@@ -7,13 +8,13 @@ const Card = ({ propsData }) => {
     // console.log(propsData);
     return (
         <CardContainer href="https://styled-components.com/docs/basics">
-            <a href="#">
+            <NavLink to="/logement">
                 {/* <img className="thumb__img" src={propsData.cover} alt="" /> */}
                 <CardImage src={propsData.cover} alt={propsData.title} />
                 <CardContainerTitle>
                     <CardTitle>{propsData.title}</CardTitle>
                 </CardContainerTitle>
-            </a>
+            </NavLink>
         </CardContainer>
     );
 };
