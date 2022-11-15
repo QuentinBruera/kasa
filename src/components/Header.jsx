@@ -12,7 +12,6 @@ const Header = () => {
                 <NavigationUl>
                     <NavLink
                         to="/"
-                        className={(nav) => (nav.isActive ? "nav-active" : "")}
                         style={({ isActive }) => ({
                             textDecoration: isActive ? "underline" : "none",
                             color: color.primary,

@@ -18,7 +18,7 @@ const Gallery = ({ propsData }) => {
 export default Gallery;
 
 const CardSection = styled.section`
-    margin-top: 99px;
+    margin: 99px 0 50px 0;
 `;
 
 const GridContainer = styled.div`

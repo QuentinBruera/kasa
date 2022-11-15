@@ -24,3 +24,41 @@ ul {
 /* ----------------------------------------------------- */
 /* -------------------Espace de travail------------------*/
 /* ----------------------------------------------------- */
+/* 
+.errorSection {
+}
+
+.errorContainer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 156px;
+}
+
+.errorH1 {
+    margin-top: 126px;
+    font-size: 288px;
+    font-weight: 700;
+    color: #ff6060;
+}
+
+.errorH2 {
+    margin-top: 25px;
+    font-size: 36px;
+    color: #ff6060;
+}
+
+.errorAnchor {
+    margin-top: 185px;
+    text-decoration: underline;
+    font-size: 18px;
+    color: #ff6060;
+} */
+
+/* .active {
+    color: black !important;
+} */
+
+#iop {
+    color: blueviolet;
+}

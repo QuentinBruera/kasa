@@ -15,7 +15,6 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainer = styled.footer`
-    margin-top: 50px;
     height: 209px;
     background-color: ${color.black};
     display: flex;
