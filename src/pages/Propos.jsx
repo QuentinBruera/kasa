@@ -1,11 +1,16 @@
 import React from "react";
+import BannerPropos from "../components/BannerPropos";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
+import ProposBody from "../components/ProposBody";
 
 const Propos = () => {
     return (
         <div>
             <Header />
-            <p>A propos</p>
+            <BannerPropos />
+            <ProposBody />
+            <Footer />
         </div>
     );
 };

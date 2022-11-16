@@ -18,7 +18,7 @@ const BannerContainer = styled.div`
     margin-top: 63px;
     height: 223px;
     position: relative;
-    background: #000000;
+    background: ${color.black};
     border-radius: 25px;
 `;
 

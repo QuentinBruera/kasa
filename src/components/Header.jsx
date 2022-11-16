@@ -10,28 +10,12 @@ const Header = () => {
             <Logo src="./assets/Logo-rouge.svg" alt="Logo de Kasa" />
             <Navigation>
                 <NavigationUl>
-                    <NavLink
-                        to="/"
-                        style={({ isActive }) => ({
-                            textDecoration: isActive ? "underline" : "none",
-                            color: color.primary,
-                            fontSize: "24px",
-                            marginLeft: "57px",
-                        })}
-                    >
+                    <NavigationLink to="/">
                         <NavigationLi>Accueil</NavigationLi>
-                    </NavLink>
-                    <NavLink
-                        to="/a-propos"
-                        style={({ isActive }) => ({
-                            textDecoration: isActive ? "underline" : "none",
-                            color: color.primary,
-                            fontSize: "24px",
-                            marginLeft: "57px",
-                        })}
-                    >
+                    </NavigationLink>
+                    <NavigationLink to="/a-propos">
                         <NavigationLi>A Propos</NavigationLi>
-                    </NavLink>
+                    </NavigationLink>
                 </NavigationUl>
             </Navigation>
         </HeaderContainer>
@@ -60,3 +44,14 @@ const NavigationUl = styled.ul`
 `;
 
 const NavigationLi = styled.li``;
+
+// styled(NavLink) combine styled-components et le NavLink de react-router-dom
+// NavLink passe la class="active" si le to="" correspond à la route dans l'url
+const NavigationLink = styled(NavLink)`
+    color: ${color.primary};
+    font-size: 24px;
+    margin-left: 57px;
+    &.active {
+        text-decoration: underline;
+    }
+`;
