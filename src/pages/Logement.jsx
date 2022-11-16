@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import Img from "../Logo-rouge.svg";
 
 // useParams sert à récuperer le paramètre dans l'url
 import { useParams } from "react-router-dom";
@@ -18,7 +19,6 @@ const Logement = ({ propsData }) => {
     return (
         <div>
             <Header />
-            <img src="" alt="" />
             <p>Logement</p>
         </div>
     );

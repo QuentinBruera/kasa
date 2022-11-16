@@ -1,12 +1,14 @@
 import React from "react";
 
+import HomeBannerImage from "../assets/home-banner.jpg";
+
 import styled from "styled-components";
 import color from "../styles/color";
 
 const BannerHome = () => {
     return (
         <BannerContainer>
-            <BannerImage src="./assets/home-banner.jpg" alt="Kasa banner" />
+            <BannerImage src={HomeBannerImage} alt="Kasa home banner" />
             <BannerTitle>Chez vous, partout et ailleurs</BannerTitle>
         </BannerContainer>
     );

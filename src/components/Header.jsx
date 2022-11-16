@@ -1,13 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import RedLogo from "../assets/Logo-rouge.svg";
+
 import styled from "styled-components";
 import color from "../styles/color";
 
 const Header = () => {
     return (
         <HeaderContainer>
-            <Logo src="./assets/Logo-rouge.svg" alt="Logo de Kasa" />
+            <Logo src={RedLogo} alt="Logo de Kasa" />
             <Navigation>
                 <NavigationUl>
                     <NavigationLink to="/">

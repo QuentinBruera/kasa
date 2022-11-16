@@ -1,15 +1,14 @@
 import React from "react";
 
+import PropsBannerImage from "../assets/propos-banner.jpg";
+
 import styled from "styled-components";
 import color from "../styles/color";
 
 const BannerPropos = () => {
     return (
         <BannerContainer>
-            <BannerImage
-                src="./assets/propos-banner.jpg"
-                alt="A propos banner"
-            />
+            <BannerImage src={PropsBannerImage} alt="Kasa a propos banner" />
         </BannerContainer>
     );
 };

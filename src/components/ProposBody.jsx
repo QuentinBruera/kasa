@@ -1,4 +1,7 @@
 import React from "react";
+
+import ArrowIcon from "../assets/arrow.svg";
+
 import styled from "styled-components";
 import color from "../styles/color";
 
@@ -8,7 +11,7 @@ const ProposBody = () => {
             <Details>
                 <Summary>
                     <Title>Fiabilité</Title>
-                    <Arrow src="./assets/arrow.svg" alt="Arrow Icon" />
+                    <Arrow src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
                 <Text>
                     Les annonces postées sur Kasa garantissent une fiabilité
@@ -20,7 +23,7 @@ const ProposBody = () => {
             <Details>
                 <Summary>
                     <Title>Respect</Title>
-                    <Arrow src="./assets/arrow.svg" alt="Arrow Icon" />
+                    <Arrow src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
                 <Text>
                     La bienveillance fait partie des valeurs fondatrices de
@@ -31,7 +34,7 @@ const ProposBody = () => {
             <Details>
                 <Summary>
                     <Title>Service</Title>
-                    <Arrow src="./assets/arrow.svg" alt="Arrow Icon" />
+                    <Arrow src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
                 <Text>
                     Nos équipes se tiennent à votre disposition pour vous
@@ -42,7 +45,7 @@ const ProposBody = () => {
             <Details>
                 <Summary>
                     <Title>Sécurité</Title>
-                    <Arrow src="./assets/arrow.svg" alt="Arrow Icon" />
+                    <Arrow src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
                 <Text>
                     La sécurité est la priorité de Kasa. Aussi bien pour nos

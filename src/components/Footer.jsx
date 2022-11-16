@@ -1,12 +1,14 @@
 import React from "react";
 
+import WhiteLogo from "../assets/Logo-blanc.svg";
+
 import styled from "styled-components";
 import color from "../styles/color";
 
 const Footer = () => {
     return (
         <FooterContainer>
-            <FooterLogo src="./assets/logo-blanc.svg" alt="" />
+            <FooterLogo src={WhiteLogo} alt="Logo de Kasa" />
             <FooterText> © 2020 Kasa. All rights reserved</FooterText>
         </FooterContainer>
     );
