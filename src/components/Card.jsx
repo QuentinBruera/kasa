@@ -1,14 +1,14 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 import color from "../styles/color";
 
-const Card = ({ propsData }) => {
+const Card = ({ propsData, index }) => {
     // console.log(propsData);
     return (
-        <CardContainer href="https://styled-components.com/docs/basics">
-            <NavLink to="/logement">
+        <CardContainer>
+            {/* <NavLink to="/logement"> */}
+            <NavLink to={`/logement/${propsData.id}`}>
                 {/* <img className="thumb__img" src={propsData.cover} alt="" /> */}
                 <CardImage src={propsData.cover} alt={propsData.title} />
                 <CardContainerTitle>

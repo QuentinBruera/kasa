@@ -18,7 +18,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home propsData={data} />} />
                 <Route
-                    path="/logement"
+                    path="/logement/:id"
                     element={<Logement propsData={data} />}
                 />
                 <Route path="/a-propos" element={<Propos />} />

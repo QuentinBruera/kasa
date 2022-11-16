@@ -8,7 +8,11 @@ const Gallery = ({ propsData }) => {
         <CardSection>
             <GridContainer>
                 {propsData.map((propsData, index) => (
-                    <Card propsData={propsData} key={index} />
+                    <Card
+                        propsData={propsData}
+                        index={index}
+                        key={propsData.id + index}
+                    />
                 ))}
             </GridContainer>
         </CardSection>
