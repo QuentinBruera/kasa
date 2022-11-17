@@ -46,6 +46,7 @@ const Carousel = ({ oneHousingData }) => {
 export default Carousel;
 
 const CarouselContainer = styled.section`
+    margin-top: 20px;
     width: 1240px;
     height: 415px;
     position: relative;
