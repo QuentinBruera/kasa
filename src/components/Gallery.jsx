@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Card from "./Card";
 
 const Gallery = ({ propsData }) => {
-    console.log(propsData.length);
     return (
         <CardSection>
             <GridContainer>

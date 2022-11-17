@@ -22,9 +22,6 @@ const LogementBody = ({ oneHousingData }) => {
             : starDisplay.push(<Star src={EmptyStarIcon} key={i}></Star>);
         i++;
     }
-
-    // };
-    console.log(oneHousingData);
     return (
         <TopContainer>
             {/* Container des infos de gauche */}
