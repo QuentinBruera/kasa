@@ -1,24 +1,21 @@
 import React from "react";
 import Header from "../components/Header";
-import Img from "../Logo-rouge.svg";
 
 // useParams sert à récuperer le paramètre dans l'url
 import { useParams } from "react-router-dom";
+import Carousel from "../components/Carousel";
 
 const Logement = ({ propsData }) => {
     // si je met "let paramas" je vais avoir un objet "id: valeur"
     // si je met "let { id }" je vais avoir directement la valeur en brut
     let { id } = useParams();
-    console.log(id);
 
-    const leLogement = propsData.find((res) => res.id === id);
-    console.log(leLogement);
-
-    // console.log(propsData.findOne({ id: "c67ab8a7" }));
+    const oneHousing = propsData.find((res) => res.id === id);
 
     return (
         <div>
             <Header />
+            <Carousel oneHousingData={oneHousing.pictures} />
             <p>Logement</p>
         </div>
     );

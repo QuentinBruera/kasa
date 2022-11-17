@@ -24,67 +24,7 @@ ul {
 /* ----------------------------------------------------- */
 /* -------------------Espace de travail------------------*/
 /* ----------------------------------------------------- */
-/* Global collapse */
+/* * {
 
-.collapse[open] .collapse__summary__image {
-    transform: rotate(180deg);
-}
-
-.collapse {
-    cursor: default;
-    margin-top: 31px;
-}
-
-.collapse__summary {
-    margin: auto;
-    /*  */
-    /* z-index: 1; */
-    position: relative;
-    cursor: pointer;
-    display: flex;
-    user-select: none;
-    list-style: none;
-    justify-content: space-between;
-    background-color: #ff6060;
-    color: #ffffff;
-}
-
-.collapse__summary__title {
-}
-
-.collapse__summary__image {
-    height: 23px;
-}
-
-.collapse--text {
-    margin: auto;
-    /*  */
-    height: auto;
-    background-color: #f7f7f7;
-    border-radius: 0 0 5px 5px;
-    margin-top: -10px;
-}
-
-/* Big collapse */
-.big-collapse {
-}
-
-.big-collapse__summary {
-    width: 1023px;
-    height: 47px;
-    font-size: 24px;
-    border-radius: 5px;
-}
-
-.big-collapse__summary__title {
-    margin: auto auto auto 18px;
-}
-
-.big-collapse__summary__image {
-    margin: auto 32.6px auto auto;
-}
-
-.big-collapse--text {
-    width: 1023px;
-    padding: 36px 27px 18px 18px;
-}
+    mix-blend-mode: difference;
+} */
