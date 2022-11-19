@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import Carousel from "../components/Carousel";
 import LogementBody from "../components/LogementBody";
 import Error from "./Error";
+import LittleCollapse from "../components/LittleCollapse";
+import Footer from "../components/Footer";
 
 const Logement = ({ propsData }) => {
     // si je met "let paramas" je vais avoir un objet "id: valeur"
@@ -22,7 +24,8 @@ const Logement = ({ propsData }) => {
             <Header />
             <Carousel oneHousingData={oneHousing.pictures} />
             <LogementBody oneHousingData={oneHousing} />
-            <p>Logement</p>
+            <LittleCollapse oneHousingData={oneHousing} />
+            <Footer />
         </div>
     );
 };

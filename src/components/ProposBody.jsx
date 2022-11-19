@@ -10,44 +10,44 @@ const ProposBody = () => {
         <Container>
             <Details>
                 <Summary>
-                    <Title>Fiabilité</Title>
-                    <Arrow src={ArrowIcon} alt="Arrow Icon" />
+                    <SummaryTitle>Fiabilité</SummaryTitle>
+                    <SummaryIcon src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
-                <Text>
+                <ContentCollapse>
                     Les annonces postées sur Kasa garantissent une fiabilité
                     totale. Les photos sont conformes aux logements, et toutes
                     les informations sont régulièrement vérifiées par nos
                     équipes.
-                </Text>
+                </ContentCollapse>
             </Details>
             <Details>
                 <Summary>
-                    <Title>Respect</Title>
-                    <Arrow src={ArrowIcon} alt="Arrow Icon" />
+                    <SummaryTitle>Respect</SummaryTitle>
+                    <SummaryIcon src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
-                <Text>
+                <ContentCollapse>
                     La bienveillance fait partie des valeurs fondatrices de
                     Kasa. Tout comportement discriminatoire ou de perturbation
                     du voisinage entraînera une exclusion de notre plateforme.
-                </Text>
+                </ContentCollapse>
             </Details>
             <Details>
                 <Summary>
-                    <Title>Service</Title>
-                    <Arrow src={ArrowIcon} alt="Arrow Icon" />
+                    <SummaryTitle>Service</SummaryTitle>
+                    <SummaryIcon src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
-                <Text>
+                <ContentCollapse>
                     Nos équipes se tiennent à votre disposition pour vous
                     fournir une expérience parfaite. N'hésitez pas à nous
                     contacter si vous avez la moindre question.
-                </Text>
+                </ContentCollapse>
             </Details>
             <Details>
                 <Summary>
-                    <Title>Sécurité</Title>
-                    <Arrow src={ArrowIcon} alt="Arrow Icon" />
+                    <SummaryTitle>Sécurité</SummaryTitle>
+                    <SummaryIcon src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
-                <Text>
+                <ContentCollapse>
                     La sécurité est la priorité de Kasa. Aussi bien pour nos
                     hôtes que pour les voyageurs, chaque logement correspond aux
                     critères de sécurité établis par nos services. En laissant
@@ -55,7 +55,7 @@ const ProposBody = () => {
                     nos équipes de vérifier que les standards sont bien
                     respectés. Nous organisons également des ateliers sur la
                     sécurité domestique pour nos hôtes.
-                </Text>
+                </ContentCollapse>
             </Details>
         </Container>
     );
@@ -88,11 +88,11 @@ const Summary = styled.summary`
     color: ${color.white};
 `;
 
-const Title = styled.p`
+const SummaryTitle = styled.p`
     margin: auto auto auto 18px;
 `;
 
-const Arrow = styled.img`
+const SummaryIcon = styled.img`
     size: 20px;
     margin: auto 32.6px auto auto;
     ${Details}[open] & {
@@ -100,7 +100,7 @@ const Arrow = styled.img`
     }
 `;
 
-const Text = styled.p`
+const ContentCollapse = styled.p`
     margin: auto;
     height: auto;
     background-color: #f7f7f7;

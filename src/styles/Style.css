@@ -24,3 +24,79 @@ ul {
 /* ----------------------------------------------------- */
 /* -------------------Espace de travail------------------*/
 /* ----------------------------------------------------- */
+.collapse[open] .collapse__summary__image {
+    transform: rotate(180deg);
+}
+
+.collapse {
+    cursor: default;
+}
+
+.collapse__summary {
+    margin: auto;
+    /*  */
+    /* z-index: 1; */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    user-select: none;
+    list-style: none;
+    justify-content: space-between;
+    background-color: #ff6060;
+    color: #ffffff;
+}
+
+.collapse__summary__title {
+}
+
+.collapse__summary__image {
+    height: 23px;
+}
+
+.collapse--text {
+    margin: auto;
+    /*  */
+    height: auto;
+    background-color: #f7f7f7;
+    border-radius: 0 0 5px 5px;
+    margin-top: -10px;
+}
+
+.little-collapse {
+}
+
+.little-collapse__summary {
+    font-size: 18px;
+    width: 582px;
+    height: 52px;
+    border-radius: 10px;
+}
+
+.little-collapse__summary__title {
+    margin: auto auto auto 20px;
+}
+
+.little-collapse__summary__image {
+    margin: auto 12px auto auto;
+    /* width: 15.5px;
+    height: auto; */
+    /* margin-right: 33px; */
+}
+
+.little-collapse--text {
+    width: 582px;
+    padding: 40px 12px 27px 20px;
+    font-size: 18px;
+    min-height: 229px;
+}
+
+.container {
+    margin-top: 24px;
+    margin-bottom: 122px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.li {
+    padding-bottom: 5px;
+}
