@@ -4,6 +4,7 @@ import ArrowIcon from "../assets/arrow.svg";
 
 import styled from "styled-components";
 import color from "../styles/color";
+import { devices } from "../styles/mediaQueries";
 
 const ProposBody = () => {
     return (
@@ -65,11 +66,30 @@ export default ProposBody;
 
 const Container = styled.section`
     margin-bottom: 201px;
+    @media ${devices.bodyScale} {
+        margin: 0 auto 90px auto;
+        width: 90%;
+    @media ${devices.tablet} {
+        margin: 0 auto 130px auto;
+        }
+    @media ${devices.mobileL} {
+        margin: 0 auto 50px auto;
+
+        }
 `;
 
 const Details = styled.details`
     cursor: default;
     margin-top: 31px;
+    @media ${devices.bodyScale} {
+        margin-top: 28px;
+    }
+    @media ${devices.tablet} {
+        margin-top: 25px;
+    }
+    @media ${devices.mobileL} {
+        margin-top: 20px;
+    }
 `;
 
 const Summary = styled.summary`
@@ -86,17 +106,43 @@ const Summary = styled.summary`
     justify-content: space-between;
     background-color: #ff6060;
     color: ${color.white};
+    @media ${devices.bodyScale} {
+        // margin: 44px auto 0 auto;
+        width: 90%;
+    }
+    @media ${devices.tablet} {
+        font-size: 21px;
+        width: 95%;
+    }
+    @media ${devices.mobileL} {
+        font-size: 13px;
+        width: 100%;
+    }
 `;
 
 const SummaryTitle = styled.p`
     margin: auto auto auto 18px;
+    @media ${devices.bodyScale} {
+    }
+    @media ${devices.tablet} {
+    }
+    @media ${devices.mobileL} {
+    }
 `;
 
 const SummaryIcon = styled.img`
-    size: 20px;
     margin: auto 32.6px auto auto;
     ${Details}[open] & {
         transform: rotate(180deg);
+    }
+    @media ${devices.bodyScale} {
+        margin-right: 20px;
+    }
+    @media ${devices.tablet} {
+        margin-right: 15px;
+    }
+    @media ${devices.mobileL} {
+        margin: 18px 10px 18px auto;
     }
 `;
 
@@ -111,4 +157,18 @@ const ContentCollapse = styled.p`
     font-size: 24px;
     font-weight: 400;
     color: ${color.primary};
+    @media ${devices.bodyScale} {
+        font-size: 20px;
+
+        width: 90%;
+    }
+    @media ${devices.tablet} {
+        font-size: 16px;
+        width: 95%;
+    }
+    @media ${devices.mobileL} {
+        padding: 25px 6px 52px 11px;
+        font-size: 12px;
+        width: 100%;
+    }
 `;

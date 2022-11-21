@@ -45,6 +45,8 @@ const FooterText = styled.p`
         font-size: 18px;
     }
     @media ${devices.mobileL} {
+        height: 209px;
+        margin-top: 30px;
         font-size: 12px;
     }
 `;
