@@ -54,7 +54,7 @@ const Summary = styled.summary`
     list-style: none;
     justify-content: space-between;
     background-color: #ff6060;
-    color: #ffffff;
+    color: ${color.white};
     font-size: 18px;
     width: 582px;
     height: 52px;
@@ -74,7 +74,7 @@ const SummaryIcon = styled.img`
 `;
 
 const LeftContentCollapse = styled.p`
-    background-color: #f7f7f7;
+    background-color: ${color.grey};
     border-radius: 0 0 5px 5px;
     margin-top: -10px;
     width: 582px;
@@ -85,7 +85,7 @@ const LeftContentCollapse = styled.p`
 `;
 
 const RightContainerContentCollapse = styled.ul`
-    background-color: #f7f7f7;
+    background-color: ${color.grey};
     border-radius: 0 0 5px 5px;
     margin-top: -10px;
     width: 582px;

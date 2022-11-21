@@ -3,18 +3,20 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import color from "../styles/color";
 
+import { devices } from "../styles/mediaQueries";
+
 const Card = ({ propsData, index }) => {
     // console.log(propsData);
     return (
         <CardContainer>
             {/* <NavLink to="/logement"> */}
-            <NavLink to={`/logement/${propsData.id}`}>
+            <CardLink to={`/logement/${propsData.id}`}>
                 {/* <img className="thumb__img" src={propsData.cover} alt="" /> */}
                 <CardImage src={propsData.cover} alt={propsData.title} />
                 <CardContainerTitle>
                     <CardTitle>{propsData.title}</CardTitle>
                 </CardContainerTitle>
-            </NavLink>
+            </CardLink>
         </CardContainer>
     );
 };
@@ -22,15 +24,28 @@ const Card = ({ propsData, index }) => {
 export default Card;
 
 const CardContainer = styled.div`
+    margin: auto;
     width: 340px;
     height: 340px;
     position: relative;
     border-radius: 10px;
+    @media ${devices.bodyScale} {
+        width: 335px;
+        height: 255px;
+    }
+    @media ${devices.mobileL} {
+        width: 335px;
+        height: 255px;
+    }
 `;
 
+const CardLink = styled(NavLink)``;
+
 const CardImage = styled.img`
-    width: 340px;
-    height: 340px;
+    // width: 340px;
+    width: 100%;
+    // height: 340px;
+    height: 100%;
     object-fit: cover;
     border-radius: 10px;
 `;
