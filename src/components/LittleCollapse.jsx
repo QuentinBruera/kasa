@@ -2,6 +2,7 @@ import React from "react";
 import ArrowIcon from "../assets/arrow.svg";
 import styled from "styled-components";
 import color from "../styles/color";
+import { devices } from "../styles/mediaQueries";
 
 const LittleCollapse = ({ oneHousingData }) => {
     return (
@@ -39,10 +40,34 @@ const Container = styled.section`
     margin-bottom: 122px;
     display: flex;
     justify-content: space-between;
+    @media ${devices.bodyScale} {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    @media ${devices.tablet} {
+        flex-direction: column;
+        margin-bottom: 165px;
+    }
+    @media ${devices.mobileL} {
+        margin-bottom: 235px;
+    }
 `;
 
 const Details = styled.details`
     cursor: default;
+    @media ${devices.bodyScale} {
+        margin: 44px 0 0 0;
+        width: 45%;
+    }
+    @media ${devices.tablet} {
+        margin-top: 20px;
+        font-size: 21px;
+        width: 100%;
+    }
+    @media ${devices.mobileL} {
+        font-size: 13px;
+    }
 `;
 
 const Summary = styled.summary`
@@ -59,6 +84,18 @@ const Summary = styled.summary`
     width: 582px;
     height: 52px;
     border-radius: 10px;
+    @media ${devices.bodyScale} {
+        width: 100%;
+    }
+    @media ${devices.tablet} {
+        border-radius: 5px;
+        font-size: 21px;
+        height: 30px;
+        // margin: auto;
+    }
+    @media ${devices.mobileL} {
+        font-size: 13px;
+    }
 `;
 
 const SummaryTitle = styled.p`
@@ -71,27 +108,56 @@ const SummaryIcon = styled.img`
     ${Details}[open] & {
         transform: rotate(180deg);
     }
+    @media ${devices.bodyScale} {
+        margin-right: 20px;
+    }
+    @media ${devices.tablet} {
+        margin-right: 15px;
+    }
+    @media ${devices.mobileL} {
+        margin: 10px 10px 10px auto;
+    }
 `;
 
+const styleContentCollapse = {
+    backgroundColor: color.grey,
+    borderRadius: "0 0 5px 5px",
+    marginTop: "-10px",
+    width: "582px",
+    padding: "40px 12px 27px 20px",
+    fontSize: "18px",
+    minHeight: "229px",
+};
+
 const LeftContentCollapse = styled.p`
-    background-color: ${color.grey};
-    border-radius: 0 0 5px 5px;
-    margin-top: -10px;
-    width: 582px;
-    padding: 40px 12px 27px 20px;
-    font-size: 18px;
-    min-height: 229px;
+    ${styleContentCollapse}
     color: ${color.primary};
+    @media ${devices.bodyScale} {
+        font-size: 20px;
+        width: 100%;
+    }
+    @media ${devices.tablet} {
+        font-size: 16px;
+    }
+    @media ${devices.mobileL} {
+        padding: 25px 6px 52px 11px;
+        font-size: 12px;
+    }
 `;
 
 const RightContainerContentCollapse = styled.ul`
     background-color: ${color.grey};
-    border-radius: 0 0 5px 5px;
-    margin-top: -10px;
-    width: 582px;
-    padding: 35px 12px 27px 20px;
-    font-size: 18px;
-    min-height: 229px;
+    ${styleContentCollapse}
+    @media ${devices.bodyScale} {
+        width: 100%;
+    }
+    @media ${devices.tablet} {
+        font-size: 16px;
+    }
+    @media ${devices.mobileL} {
+        padding: 25px 6px 52px 11px;
+        font-size: 12px;
+    }
 `;
 
 const RightContentCollapse = styled.li`
