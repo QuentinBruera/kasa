@@ -36,13 +36,13 @@ const LittleCollapse = ({ oneHousingData }) => {
 export default LittleCollapse;
 
 const Container = styled.section`
-    margin-top: 24px;
-    margin-bottom: 122px;
+    width: 1240px;
+    margin: 24px auto 122px auto;
     display: flex;
     justify-content: space-between;
     @media ${devices.bodyScale} {
         width: 90%;
-        margin: auto;
+        margin-top: 0;
         margin-bottom: 100px;
     }
     @media ${devices.tablet} {
@@ -57,7 +57,7 @@ const Container = styled.section`
 const Details = styled.details`
     cursor: default;
     @media ${devices.bodyScale} {
-        margin: 44px 0 0 0;
+        margin: 24px 0 0 0;
         width: 45%;
     }
     @media ${devices.tablet} {
@@ -91,7 +91,6 @@ const Summary = styled.summary`
         border-radius: 5px;
         font-size: 21px;
         height: 30px;
-        // margin: auto;
     }
     @media ${devices.mobileL} {
         font-size: 13px;

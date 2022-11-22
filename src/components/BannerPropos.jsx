@@ -22,13 +22,14 @@ const BannerPropos = () => {
 export default BannerPropos;
 
 const BannerContainer = styled.div`
-    margin-top: 44px;
+    width: 1240px;
+    margin: 44px auto 0 auto;
     height: 223px;
     position: relative;
     background: ${color.black};
     border-radius: 25px;
     @media ${devices.bodyScale} {
-        margin: 44px auto 0 auto;
+        margin-top: 44px;
         width: 90%;
         @media ${devices.tablet} {
             margin-top: 35px;

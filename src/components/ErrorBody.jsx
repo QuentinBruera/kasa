@@ -19,10 +19,11 @@ const ErrorBody = () => {
 export default ErrorBody;
 
 const ErrorSection = styled.section`
+    width: 1240px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 156px;
+    margin: 0 auto 156px auto;
     @media ${devices.bodyScale} {
         width: 90%;
         margin: auto;

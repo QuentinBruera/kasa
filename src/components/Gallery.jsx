@@ -24,6 +24,7 @@ const Gallery = ({ propsData }) => {
 export default Gallery;
 
 const CardSection = styled.section`
+    width: 1240px;
     margin: 43px auto 50px auto;
     padding: 1px;
     border-radius: 25px;

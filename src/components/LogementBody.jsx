@@ -59,6 +59,7 @@ const LogementBody = ({ oneHousingData }) => {
 export default LogementBody;
 
 const TopContainer = styled.section`
+    width: 1240px;
     margin: 24px auto 0 auto;
     display: flex;
     justify-content: space-between;
@@ -66,7 +67,7 @@ const TopContainer = styled.section`
         width: 90%;
     }
     @media ${devices.tablet} {
-        margin: 10px auto 0 auto;
+        margin-top: 10px;
         flex-direction: column;
     }
     @media ${devices.mobileL} {

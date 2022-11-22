@@ -65,6 +65,8 @@ const ProposBody = () => {
 export default ProposBody;
 
 const Container = styled.section`
+    width: 1240px;
+    margin: 0 auto 0 auto;
     margin-bottom: 201px;
     @media ${devices.bodyScale} {
         margin: 0 auto 90px auto;
@@ -74,7 +76,6 @@ const Container = styled.section`
         }
     @media ${devices.mobileL} {
         margin: 0 auto 50px auto;
-
         }
 `;
 

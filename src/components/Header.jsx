@@ -28,19 +28,20 @@ const Header = () => {
 export default Header;
 
 const HeaderContainer = styled.header`
+    width: 1240px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 40px;
+    margin: 40px auto 0 auto;
     @media ${devices.bodyScale} {
         width: 90%;
-        margin: 20px auto 0 auto;
+        margin-top: 20px;
     }
     @media ${devices.tablet} {
-        margin: 30px auto 0 auto;
+        margin-top: 30px;
     }
     @media ${devices.mobileL} {
-        margin: 20px auto 0 auto;
+        margin-top: 20px;
     }
 `;
 

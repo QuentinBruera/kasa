@@ -18,14 +18,15 @@ const BannerHome = () => {
 export default BannerHome;
 
 const BannerContainer = styled.section`
-    margin-top: 63px;
+    width: 1240px;
+    margin: 63px auto 0 auto;
     height: 223px;
     position: relative;
     background: ${color.black};
     border-radius: 25px;
     @media ${devices.bodyScale} {
         width: 90%;
-        margin: 17px auto 0 auto;
+        margin-top: 17px;
     }
     @media ${devices.tablet} {
         border-radius: 15px;
@@ -33,7 +34,7 @@ const BannerContainer = styled.section`
     }
     @media ${devices.mobileL} {
         border-radius: 10px;
-        margin: 15px auto 0 auto;
+        margin-top: 15px;
         height: 111px;
     }
 `;
