@@ -31,12 +31,13 @@ const BannerContainer = styled.div`
     @media ${devices.bodyScale} {
         margin-top: 44px;
         width: 90%;
-        @media ${devices.tablet} {
-            margin-top: 35px;
-        }
-        @media ${devices.mobileL} {
-            margin-top: 22px;
-        }
+    }
+    @media ${devices.tablet} {
+        margin-top: 35px;
+    }
+    @media ${devices.mobileL} {
+        border-radius: 10px;
+        margin-top: 16px;
     }
 `;
 
@@ -59,6 +60,7 @@ const BannerImagePhone = styled.img`
     ${Images}
     display: none;
     @media ${devices.mobileL} {
+        border-radius: 10px;
         display: block;
     }
 `;

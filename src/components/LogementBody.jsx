@@ -5,13 +5,8 @@ import FullStarIcon from "../assets/Etoile-pleine.svg";
 import EmptyStarIcon from "../assets/Etoile-vide.svg";
 import { devices } from "../styles/mediaQueries";
 
-// for (let i = 0; i < oneHousingData.tag.length; i++) {
-//     console.log("i");
-// }
-
 const LogementBody = ({ oneHousingData }) => {
     const name = oneHousingData.host.name.split(" ");
-    // console.log(name);
 
     const pictureAlt = "Photo de " + oneHousingData.host.name;
 
@@ -71,31 +66,27 @@ const TopContainer = styled.section`
         flex-direction: column;
     }
     @media ${devices.mobileL} {
+        margin-top: 1px;
     }
 `;
 
 const TopLeftContainer = styled.div`
+    margin-top: 10px;
     @media ${devices.bodyScale} {
         max-width: 78%;
     }
     @media ${devices.tablet} {
         max-width: 100%;
     }
-    @media ${devices.mobileL} {
-    }
 `;
 
 const TopRightContainer = styled.div`
     margin-right: 1px;
-    @media ${devices.bodyScale} {
-    }
     @media ${devices.tablet} {
         margin-top: 16px;
         display: flex;
         flex-direction: row-reverse;
         justify-content: space-between;
-    }
-    @media ${devices.mobileL} {
     }
 `;
 
@@ -117,20 +108,15 @@ const LocationP = styled.p`
     margin-top: 5px;
     font-size: 18px;
     color: ${color.primary};
-    @media ${devices.bodyScale} {
-    }
-    @media ${devices.tablet} {
-    }
     @media ${devices.mobileL} {
         font-size: 14px;
+        margin-top: 10px;
     }
 `;
 
 const TagsContainer = styled.div`
     margin-top: 22px;
     display: flex;
-    @media ${devices.bodyScale} {
-    }
     @media ${devices.tablet} {
         flex-wrap: wrap;
         margin-right: 10px;
@@ -149,8 +135,6 @@ const TagsP = styled.p`
     text-align: center;
     border-radius: 10px;
     margin: auto 10px auto 0;
-    @media ${devices.bodyScale} {
-    }
     @media ${devices.tablet} {
         margin: 10px 10px 0 0;
         min-width: 84px;
@@ -165,12 +149,6 @@ const TagsP = styled.p`
 const HostContainer = styled.div`
     display: flex;
     justify-content: end;
-    @media ${devices.bodyScale} {
-    }
-    @media ${devices.tablet} {
-    }
-    @media ${devices.mobileL} {
-    }
 `;
 
 const NameContainer = styled.div`
@@ -189,12 +167,7 @@ const BaseName = {
 const FirstNameP = styled.p`
     margin-bottom: 2px;
     ${BaseName}
-    @media ${devices.bodyScale} {
-    }
-    @media ${devices.tablet} {
-    }
     @media ${devices.mobileL} {
-        // margin-bottom: 0px;
         font-size: 12px;
     }
 `;
@@ -202,12 +175,7 @@ const FirstNameP = styled.p`
 const LastNameP = styled.p`
     margin-top: 2px;
     ${BaseName}
-    @media ${devices.bodyScale} {
-    }
-    @media ${devices.tablet} {
-    }
     @media ${devices.mobileL} {
-        // margin-top: 0px;
         font-size: 12px;
     }
 `;
@@ -218,10 +186,6 @@ const HostPicture = styled.img`
     border-radius: 50%;
     background-color: ${color.grey};
     margin: 0;
-    @media ${devices.bodyScale} {
-    }
-    @media ${devices.tablet} {
-    }
     @media ${devices.mobileL} {
         margin: auto;
         width: 32px;
@@ -241,11 +205,9 @@ const Star = styled.img`
         width: 30px;
         height: 30px;
     }
-    @media ${devices.tablet} {
-    }
     @media ${devices.mobileL} {
-        margin: auto;
-        width: 15px;
-        height: 15px;
+        margin: 2px auto -2px auto;
+        width: 17px;
+        height: 17px;
     }
 `;

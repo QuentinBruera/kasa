@@ -7,15 +7,13 @@ import Header from "../components/Header";
 
 const Home = ({ propsData }) => {
     return (
-        <HomeContainer>
+        <div>
             <Header />
             <BannerHome />
             <Gallery propsData={propsData} />
             <Footer />
-        </HomeContainer>
+        </div>
     );
 };
 
 export default Home;
-
-const HomeContainer = styled.div``;

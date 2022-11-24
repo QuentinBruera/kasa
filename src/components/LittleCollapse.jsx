@@ -50,6 +50,7 @@ const Container = styled.section`
         margin-bottom: 165px;
     }
     @media ${devices.mobileL} {
+        margin-top: -5px;
         margin-bottom: 235px;
     }
 `;
@@ -103,7 +104,7 @@ const SummaryTitle = styled.p`
 
 const SummaryIcon = styled.img`
     size: 20px;
-    margin: auto 32.6px auto auto;
+    margin: auto 12px auto auto;
     ${Details}[open] & {
         transform: rotate(180deg);
     }
@@ -130,6 +131,7 @@ const styleContentCollapse = {
 
 const LeftContentCollapse = styled.p`
     ${styleContentCollapse}
+    font-weight: 400;
     color: ${color.primary};
     @media ${devices.bodyScale} {
         font-size: 20px;
@@ -137,9 +139,10 @@ const LeftContentCollapse = styled.p`
     }
     @media ${devices.tablet} {
         font-size: 16px;
+        padding: 28px 6px 3px 13px;
+        min-height: 0;
     }
     @media ${devices.mobileL} {
-        padding: 25px 6px 52px 11px;
         font-size: 12px;
     }
 `;
@@ -152,14 +155,16 @@ const RightContainerContentCollapse = styled.ul`
     }
     @media ${devices.tablet} {
         font-size: 16px;
+        padding: 28px 6px 3px 13px;
+        min-height: 0;
     }
     @media ${devices.mobileL} {
-        padding: 25px 6px 52px 11px;
         font-size: 12px;
     }
 `;
 
 const RightContentCollapse = styled.li`
-    margin-top: 5px;
+    font-weight: 400;
+    margin-bottom: 3px;
     color: ${color.primary};
 `;

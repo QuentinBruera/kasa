@@ -38,7 +38,7 @@ const ErrorSection = styled.section`
 `;
 
 const ErrorH1 = styled.h1`
-    margin-top: 126px;
+    margin-top: 186px;
     font-size: 288px;
     font-weight: 700;
     color: ${color.primary};
@@ -64,7 +64,8 @@ const ErrorH2 = styled.h2`
         font-size: 21px;
     }
     @media ${devices.mobileL} {
-        margin: auto;
+        line-height: 27px;
+        margin: 2px auto auto auto;
         width: 260px;
         font-size: 18px;
     }

@@ -31,11 +31,11 @@ const FooterContainer = styled.footer`
 const FooterLogo = styled.img`
     width: 122px;
     height: 39px;
-    margin-top: 66px;
+    margin-top: 62px;
 `;
 
 const FooterText = styled.p`
-    margin-top: 60px;
+    margin-top: 45px;
     font-size: 24px;
     color: ${color.white};
     @media ${devices.bodyScale} {

@@ -6,7 +6,6 @@ import color from "../styles/color";
 import { devices } from "../styles/mediaQueries";
 
 const Card = ({ propsData, index }) => {
-    // console.log(propsData);
     return (
         <CardContainer>
             {/* <NavLink to="/logement"> */}
@@ -42,9 +41,7 @@ const CardContainer = styled.div`
 const CardLink = styled(NavLink)``;
 
 const CardImage = styled.img`
-    // width: 340px;
     width: 100%;
-    // height: 340px;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
@@ -73,4 +70,7 @@ const CardTitle = styled.p`
     margin: 0;
     color: ${color.white};
     font-size: 18px;
+    @media ${devices.mobileL} {
+        bottom: 18px;
+    }
 `;

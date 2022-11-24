@@ -59,6 +59,7 @@ const CarouselContainer = styled.section`
         height: 290px;
     }
     @media ${devices.mobileL} {
+        margin-top: 27px;
         height: 255px;
     }
 `;
@@ -81,14 +82,13 @@ const CarouselImage = styled.img`
 
 const BaseArrowStyle = {
     position: "absolute",
-    top: "150px",
-    width: "46px",
-    height: "79px",
+    top: "162px",
+    width: "93px",
     cursor: "pointer",
 };
 
 const CarouselLeftArrow = styled.img`
-    left: 32px;
+    left: 5px;
     transform: rotate(90deg);
     ${BaseArrowStyle};
     ${(props) => props.oneHousingData.length === 1 && `display: none;`};
@@ -102,12 +102,12 @@ const CarouselLeftArrow = styled.img`
         width: 35px;
     }
     @media ${devices.mobileL} {
-        width: 30px;
+        width: 22px;
     }
 `;
 
 const CarouselRightArrow = styled.img`
-    right: 32px;
+    right: 5px;
     transform: rotate(-90deg);
     ${BaseArrowStyle};
     ${(props) => props.oneHousingData.length === 1 && `display: none;`};
@@ -121,7 +121,7 @@ const CarouselRightArrow = styled.img`
         width: 35px;
     }
     @media ${devices.mobileL} {
-        width: 30px;
+        width: 22px;
     }
 `;
 
@@ -129,7 +129,7 @@ const CounterImage = styled.p`
     position: absolute;
     bottom: 10px;
     left: 50%;
-    font-size: 14px;
+    font-size: 18px;
     color: ${color.white};
     ${(props) => props.oneHousingData.length === 1 && `display: none;`};
     @media ${devices.mobileL} {

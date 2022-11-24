@@ -105,10 +105,9 @@ const Summary = styled.summary`
     user-select: none;
     list-style: none;
     justify-content: space-between;
-    background-color: #ff6060;
+    background-color: ${color.primary};
     color: ${color.white};
     @media ${devices.bodyScale} {
-        // margin: 44px auto 0 auto;
         width: 90%;
     }
     @media ${devices.tablet} {
@@ -118,17 +117,12 @@ const Summary = styled.summary`
     @media ${devices.mobileL} {
         font-size: 13px;
         width: 100%;
+        height: 30px;
     }
 `;
 
 const SummaryTitle = styled.p`
-    margin: auto auto auto 18px;
-    @media ${devices.bodyScale} {
-    }
-    @media ${devices.tablet} {
-    }
-    @media ${devices.mobileL} {
-    }
+    margin: auto auto auto 13px;
 `;
 
 const SummaryIcon = styled.img`
@@ -143,24 +137,23 @@ const SummaryIcon = styled.img`
         margin-right: 15px;
     }
     @media ${devices.mobileL} {
-        margin: 18px 10px 18px auto;
+        margin: 10px 6px 10px auto;
     }
 `;
 
 const ContentCollapse = styled.p`
     margin: auto;
     height: auto;
-    background-color: #f7f7f7;
+    background-color: ${color.grey};
     border-radius: 0 0 5px 5px;
     margin-top: -10px;
     width: 1023px;
-    padding: 36px 27px 18px 18px;
+    padding: 40px 27px 11px 18px;
     font-size: 24px;
     font-weight: 400;
     color: ${color.primary};
     @media ${devices.bodyScale} {
         font-size: 20px;
-
         width: 90%;
     }
     @media ${devices.tablet} {
@@ -168,7 +161,7 @@ const ContentCollapse = styled.p`
         width: 95%;
     }
     @media ${devices.mobileL} {
-        padding: 25px 6px 52px 11px;
+        padding: 29px 6px 52px 13px;
         font-size: 12px;
         width: 100%;
     }
