@@ -7,10 +7,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import data from "./data/logements.json";
 
 // Importation des pages
-import Error from "./pages/Error";
 import Home from "./pages/Home";
 import Logement from "./pages/Logement";
 import Propos from "./pages/Propos";
+import Error from "./pages/Error";
 
 function App() {
     return (
