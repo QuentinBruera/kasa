@@ -1,7 +1,15 @@
 import React from "react";
+
+// Imporation de NavLink pour gérer les liens dans l'application
 import { NavLink } from "react-router-dom";
+
+// Importation de styled-components
 import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
 import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
 
 const ErrorBody = () => {
@@ -9,6 +17,7 @@ const ErrorBody = () => {
         <ErrorSection>
             <ErrorH1>404</ErrorH1>
             <ErrorH2>
+                {/* &nbsp; : sert à forcer les deux mots à ne pas être séparé par un changement de ligne */}
                 Oups! La page que vous&nbsp;demandez n'existe&nbsp;pas.
             </ErrorH2>
             <ErrorLink to="/">Retourner sur la page d'accueil</ErrorLink>
@@ -71,6 +80,7 @@ const ErrorH2 = styled.h2`
     }
 `;
 
+// Le NavLink est appelé avec styler-compenant
 const ErrorLink = styled(NavLink)`
     margin-top: 185px;
     text-decoration: underline;

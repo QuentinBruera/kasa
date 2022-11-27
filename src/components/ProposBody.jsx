@@ -1,9 +1,15 @@
 import React from "react";
 
+// Importation de l'icone flèche
 import ArrowIcon from "../assets/arrow.svg";
 
+// Importation de styled-components
 import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
 import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
 
 const ProposBody = () => {

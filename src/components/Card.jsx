@@ -1,16 +1,21 @@
+import React from "react";
+
+// Imporation de NavLink pour gérer les liens dans l'application
 import { NavLink } from "react-router-dom";
 
+// Importation de styled-components
 import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
 import color from "../styles/color";
 
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
 
-const Card = ({ propsData, index }) => {
+const Card = ({ propsData }) => {
     return (
         <CardContainer>
-            {/* <NavLink to="/logement"> */}
             <CardLink to={`/logement/${propsData.id}`}>
-                {/* <img className="thumb__img" src={propsData.cover} alt="" /> */}
                 <CardImage src={propsData.cover} alt={propsData.title} />
                 <CardContainerTitle>
                     <CardTitle>{propsData.title}</CardTitle>

@@ -1,7 +1,9 @@
 import React from "react";
+
+// Importation des modules pour la page Error
+import Header from "../components/Header";
 import ErrorBody from "../components/ErrorBody";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
 
 const Error = () => {
     return (

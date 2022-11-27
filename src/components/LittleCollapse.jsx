@@ -1,7 +1,15 @@
 import React from "react";
+
+// Importation de l'icone flèche
 import ArrowIcon from "../assets/arrow.svg";
+
+// Importation de styled-components
 import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
 import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
 
 const LittleCollapse = ({ oneHousingData }) => {
@@ -10,7 +18,7 @@ const LittleCollapse = ({ oneHousingData }) => {
             <Details>
                 <Summary>
                     <SummaryTitle>Description</SummaryTitle>
-                    <SummaryIcon src={ArrowIcon} alt="" />
+                    <SummaryIcon src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
                 <LeftContentCollapse>
                     {oneHousingData.description}
@@ -19,9 +27,10 @@ const LittleCollapse = ({ oneHousingData }) => {
             <Details>
                 <Summary>
                     <SummaryTitle>Équipements</SummaryTitle>
-                    <SummaryIcon src={ArrowIcon} alt="" />
+                    <SummaryIcon src={ArrowIcon} alt="Arrow Icon" />
                 </Summary>
                 <RightContainerContentCollapse>
+                    {/* Affichage de la liste des équipements du collapse droit */}
                     {oneHousingData.equipments.map((data, index) => (
                         <RightContentCollapse key={data + index}>
                             {data}
@@ -119,6 +128,7 @@ const SummaryIcon = styled.img`
     }
 `;
 
+// Variable pour le style du contenu des collapses
 const styleContentCollapse = {
     backgroundColor: color.grey,
     borderRadius: "0 0 5px 5px",

@@ -1,9 +1,15 @@
 import React from "react";
 
+// Importation de l'image de la bannière
 import HomeBannerImage from "../assets/home-banner.jpg";
 
+// Importation de styled-components
 import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
 import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
 
 const BannerHome = () => {

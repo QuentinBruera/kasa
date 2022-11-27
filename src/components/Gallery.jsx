@@ -1,9 +1,16 @@
 import React from "react";
-import styled from "styled-components";
-import Card from "./Card";
 
+// Importation de styled-components
+import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
 import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
+
+// Importation du module Card
+import Card from "./Card";
 
 const Gallery = ({ propsData }) => {
     return (

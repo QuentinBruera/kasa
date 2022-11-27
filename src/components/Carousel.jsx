@@ -1,13 +1,25 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import color from "../styles/color";
+
+// Importation de l'icone flèche
 import ArrowIcon from "../assets/arrow.svg";
+
+// Importation de styled-components
+import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
+import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
 
 const Carousel = ({ oneHousingData }) => {
+    // Création d'un useState pour controller sur quel index on est pour l'affichage des images dans le carrousel
     const [currentIndex, setCurrentIndex] = useState(0);
+
+    // Variable pour stocker l'alt des images
     const altImage = "Image of housing number : " + (currentIndex + 1);
 
+    // Fonction pour gérer quand on clique sur la flèche de gauche, également si on est sur la première image pour renvoyer la dernière.
     const goToPrevious = () => {
         const isFirstSlide = currentIndex === 0;
         const newIndex = isFirstSlide
@@ -16,6 +28,7 @@ const Carousel = ({ oneHousingData }) => {
         setCurrentIndex(newIndex);
     };
 
+    // Fonction pour gérer quand on clique sur la flèche de droite, également si on est sur la dernière image pour renvoyer la première.
     const goToNext = () => {
         const isLastSlide = currentIndex === oneHousingData.length - 1;
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
@@ -80,6 +93,7 @@ const CarouselImage = styled.img`
     }
 `;
 
+// Variable pour le style des flèches
 const BaseArrowStyle = {
     position: "absolute",
     top: "162px",

@@ -1,11 +1,19 @@
 import React from "react";
 
+// Importation de l'image de la bannière pour desktop et tablette
 import PropsBannerImage from "../assets/propos-banner.jpg";
 
-import styled from "styled-components";
-import color from "../styles/color";
-import { devices } from "../styles/mediaQueries";
+// Importation de l'image de la bannière pour les mobiles
 import HomeBannerImagePhone from "../assets/home-banner-phone.jpg";
+
+// Importation de styled-components
+import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
+import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
+import { devices } from "../styles/mediaQueries";
 
 const BannerPropos = () => {
     return (
@@ -41,6 +49,7 @@ const BannerContainer = styled.div`
     }
 `;
 
+// Variable pour le style des images
 const Images = {
     width: "100%",
     height: "100%",

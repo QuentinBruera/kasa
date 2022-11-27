@@ -1,15 +1,28 @@
 import React from "react";
-import styled from "styled-components";
-import color from "../styles/color";
+
+// Importation de l'icone étoile pleine
 import FullStarIcon from "../assets/Etoile-pleine.svg";
+
+// Importation de l'icone étoile vide
 import EmptyStarIcon from "../assets/Etoile-vide.svg";
+
+// Importation de styled-components
+import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
+import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
 
 const LogementBody = ({ oneHousingData }) => {
+    // Création d'un tableau pour séparer le Nom et le Prenom de la personne
     const name = oneHousingData.host.name.split(" ");
 
+    // Variable pour stocker l'alt des images
     const pictureAlt = "Photo de " + oneHousingData.host.name;
 
+    // Gère la création dynamique des étoiles pleines/vides en fonction du rating
     const starDisplay = [];
     let i = 1;
     while (i <= 5) {
@@ -18,12 +31,14 @@ const LogementBody = ({ oneHousingData }) => {
             : starDisplay.push(<Star src={EmptyStarIcon} key={i}></Star>);
         i++;
     }
+
     return (
         <TopContainer>
             {/* Container des infos de gauche */}
             <TopLeftContainer>
                 <TitleH1>{oneHousingData.title}</TitleH1>
                 <LocationP>{oneHousingData.location}</LocationP>
+                {/* Container des Tags */}
                 <TagsContainer>
                     {oneHousingData.tags.map((unTag, index) => (
                         <TagsP key={unTag + index}>{unTag}</TagsP>
@@ -158,6 +173,7 @@ const NameContainer = styled.div`
     margin-right: 10px;
 `;
 
+// Variable pour le style Nom et Prenom
 const BaseName = {
     color: color.primary,
     fontSize: "18px",

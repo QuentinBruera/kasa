@@ -1,10 +1,18 @@
 import React from "react";
+
+// Imporation de NavLink pour gérer les liens dans l'application
 import { NavLink } from "react-router-dom";
 
+// Importation du logo rouge
 import RedLogo from "../assets/Logo-rouge.svg";
 
+// Importation de styled-components
 import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
 import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
 
 const Header = () => {

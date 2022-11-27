@@ -1,9 +1,15 @@
 import React from "react";
 
+// Importation du logo blanc
 import WhiteLogo from "../assets/Logo-blanc.svg";
 
+// Importation de styled-components
 import styled from "styled-components";
+
+// Importation de mon objet pour les couleurs
 import color from "../styles/color";
+
+// Importation de mon objet pour les mediaQueries
 import { devices } from "../styles/mediaQueries";
 
 const Footer = () => {
