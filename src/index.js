@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// Imporation du style fait par sass
+// Imporation du style
 import "./styles/Style.css";
 
 import App from "./App";

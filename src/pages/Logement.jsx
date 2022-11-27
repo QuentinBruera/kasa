@@ -1,3 +1,4 @@
+import React from "react";
 // useParams sert à récuperer le paramètre dans l'url
 import { useParams } from "react-router-dom";
 import Header from "../components/Header";
