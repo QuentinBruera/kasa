@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import BannerHome from "../components/BannerHome";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
