@@ -1,0 +1,150 @@
+@use "../1-Utils/variables" as v;
+@use "../1-Utils/mixins" as m;
+
+@media all and (max-width: v.$bodyScale) {
+}
+@media all and (max-width: v.$tablet) {
+}
+@media all and (max-width: v.$mobileL) {
+}
+
+.logementBodyContainer {
+    width: 1240px;
+    margin: 24px auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    @media all and (max-width: v.$bodyScale) {
+        width: 90%;
+    }
+    @media all and (max-width: v.$tablet) {
+        margin-top: 10px;
+        flex-direction: column;
+    }
+    @media all and (max-width: v.$mobileL) {
+        margin-top: 1px;
+    }
+    &__leftContainer {
+        margin-top: 10px;
+
+        @media all and (max-width: v.$bodyScale) {
+            max-width: 78%;
+        }
+        @media all and (max-width: v.$tablet) {
+            max-width: 100%;
+        }
+        &__h1 {
+            font-size: 36px;
+            color: v.$color-primary;
+            @media all and (max-width: v.$bodyScale) {
+                font-size: 30px;
+            }
+            @media all and (max-width: v.$tablet) {
+                font-size: 24px;
+            }
+            @media all and (max-width: v.$mobileL) {
+                font-size: 18px;
+            }
+        }
+        &__p {
+            margin-top: 5px;
+            font-size: 18px;
+            color: v.$color-primary;
+            @media all and (max-width: v.$mobileL) {
+                font-size: 14px;
+                margin-top: 10px;
+            }
+        }
+        &__tagsContainer {
+            margin-top: 22px;
+            display: flex;
+            @media all and (max-width: v.$tablet) {
+                flex-wrap: wrap;
+                margin-right: 10px;
+            }
+            @media all and (max-width: v.$mobileL) {
+                margin-top: 0px;
+            }
+            &__text {
+                font-size: 14px;
+                color: v.$color-white;
+                background-color: v.$color-primary;
+                padding: 4px 30px 3px 30px;
+                min-width: 115px;
+                text-align: center;
+                border-radius: 10px;
+                margin: auto 10px auto 0;
+                @media all and (max-width: v.$tablet) {
+                    margin: 10px 10px 0 0;
+                    min-width: 84px;
+                }
+                @media all and (max-width: v.$mobileL) {
+                    padding: 3px 5px 3px 5px;
+                    border-radius: 5px;
+                    font-size: 10px;
+                }
+            }
+        }
+    }
+    &__rightContainer {
+        margin-right: 1px;
+        @media all and (max-width: v.$tablet) {
+            margin-top: 16px;
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        &__hostContainer {
+            display: flex;
+            justify-content: end;
+            &__nameContainer {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: 10px;
+                &__firstName {
+                    @include m.hostName;
+                    margin-bottom: 2px;
+                    @media all and (max-width: v.$mobileL) {
+                        font-size: 12px;
+                    }
+                }
+                &__lastName {
+                    @include m.hostName;
+                    margin-top: 2px;
+                    @media all and (max-width: v.$mobileL) {
+                        font-size: 12px;
+                    }
+                }
+            }
+            &__img {
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                background-color: v.$color-grey;
+                margin: 0;
+                @media all and (max-width: v.$mobileL) {
+                    margin: auto;
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+        &__starContainer {
+            margin: auto 0 auto 0;
+            &__img {
+                margin-top: 19px;
+                margin-left: 4px;
+                @media all and (max-width: v.$bodyScale) {
+                    margin: auto;
+                    width: 30px;
+                    height: 30px;
+                }
+                @media all and (max-width: v.$mobileL) {
+                    margin: 2px auto -2px auto;
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use "../1-Utils/variables" as v;
+@use "../1-Utils/mixins" as m;
+
+.proposBannerContainer {
+    width: 1240px;
+    margin: 44px auto 0 auto;
+    height: 223px;
+    position: relative;
+    background: v.$color-black;
+    border-radius: 25px;
+    @media all and (max-width: v.$bodyScale) {
+        margin-top: 44px;
+        width: 90%;
+    }
+    @media all and (max-width: v.$tablet) {
+        margin-top: 35px;
+    }
+    @media all and (max-width: v.$mobileL) {
+        border-radius: 10px;
+        margin-top: 16px;
+    }
+    &__img-desktop {
+        @include m.bannerProposImg;
+        @media all and (max-width: v.$mobileL) {
+            display: none;
+        }
+    }
+    &__img-mobile {
+        @include m.bannerProposImg;
+        display: none;
+        @media all and (max-width: v.$mobileL) {
+            border-radius: 10px;
+            display: block;
+        }
+    }
+}

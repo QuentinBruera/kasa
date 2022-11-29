@@ -3,18 +3,10 @@ import React, { useState } from "react";
 // Importation de l'icone flèche
 import ArrowIcon from "../assets/arrow.svg";
 
-// Importation de styled-components
-import styled from "styled-components";
-
-// Importation de mon objet pour les couleurs
-import color from "../styles/color";
-
-// Importation de mon objet pour les mediaQueries
-import { devices } from "../styles/mediaQueries";
-
 const Carousel = ({ oneHousingData }) => {
     // Création d'un useState pour controller sur quel index on est pour l'affichage des images dans le carrousel
     const [currentIndex, setCurrentIndex] = useState(0);
+    // useState nous permet de suivre l'état d'un composant
 
     // Variable pour stocker l'alt des images
     const altImage = "Image of housing number : " + (currentIndex + 1);
@@ -36,117 +28,34 @@ const Carousel = ({ oneHousingData }) => {
     };
 
     return (
-        <CarouselContainer>
-            <CarouselImage src={oneHousingData[currentIndex]} alt={altImage} />
-            <CarouselRightArrow
-                oneHousingData={oneHousingData}
+        <section className="carouselContainer">
+            <img
+                className="carouselContainer__img"
+                src={oneHousingData[currentIndex]}
+                alt={altImage}
+            />
+            <img
+                className="carouselContainer__rightArrow"
+                style={{ display: oneHousingData.length === 1 && "none" }}
                 src={ArrowIcon}
                 alt="Right Arrow Icon"
                 onClick={goToNext}
             />
-            <CarouselLeftArrow
-                oneHousingData={oneHousingData}
+            <img
+                className="carouselContainer__leftArrow"
+                style={{ display: oneHousingData.length === 1 && "none" }}
                 src={ArrowIcon}
                 alt="Left Arrow Icon"
                 onClick={goToPrevious}
             />
-            <CounterImage oneHousingData={oneHousingData}>
+            <p
+                className="carouselContainer__counter"
+                style={{ display: oneHousingData.length === 1 && "none" }}
+            >
                 {currentIndex + 1}/{oneHousingData.length}
-            </CounterImage>
-        </CarouselContainer>
+            </p>
+        </section>
     );
 };
 
 export default Carousel;
-
-const CarouselContainer = styled.section`
-    margin: 20px auto 0 auto;
-    width: 1240px;
-    height: 415px;
-    position: relative;
-    @media ${devices.bodyScale} {
-        height: 320px;
-        width: 90%;
-    }
-    @media ${devices.tablet} {
-        height: 290px;
-    }
-    @media ${devices.mobileL} {
-        margin-top: 27px;
-        height: 255px;
-    }
-`;
-
-const CarouselImage = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 25px;
-    @media ${devices.bodyScale} {
-        border-radius: 20px;
-    }
-    @media ${devices.tablet} {
-        border-radius: 15px;
-    }
-    @media ${devices.mobileL} {
-        border-radius: 10px;
-    }
-`;
-
-// Variable pour le style des flèches
-const BaseArrowStyle = {
-    position: "absolute",
-    top: "162px",
-    width: "93px",
-    cursor: "pointer",
-};
-
-const CarouselLeftArrow = styled.img`
-    left: 5px;
-    transform: rotate(90deg);
-    ${BaseArrowStyle};
-    ${(props) => props.oneHousingData.length === 1 && `display: none;`};
-    @media ${devices.bodyScale} {
-        left: 0px;
-        top: 50%;
-        transform: translateY(-50%) rotate(90deg);
-        width: 40px;
-    }
-    @media ${devices.tablet} {
-        width: 35px;
-    }
-    @media ${devices.mobileL} {
-        width: 22px;
-    }
-`;
-
-const CarouselRightArrow = styled.img`
-    right: 5px;
-    transform: rotate(-90deg);
-    ${BaseArrowStyle};
-    ${(props) => props.oneHousingData.length === 1 && `display: none;`};
-    @media ${devices.bodyScale} {
-        top: 50%;
-        transform: translateY(-50%) rotate(-90deg);
-        width: 40px;
-        right: 0;
-    }
-    @media ${devices.tablet} {
-        width: 35px;
-    }
-    @media ${devices.mobileL} {
-        width: 22px;
-    }
-`;
-
-const CounterImage = styled.p`
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    font-size: 18px;
-    color: ${color.white};
-    ${(props) => props.oneHousingData.length === 1 && `display: none;`};
-    @media ${devices.mobileL} {
-        display: none;
-    }
-`;

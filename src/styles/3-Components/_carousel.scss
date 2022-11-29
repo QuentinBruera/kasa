@@ -1,0 +1,83 @@
+@use "../1-Utils/variables" as v;
+@use "../1-Utils/mixins" as m;
+
+.carouselContainer {
+    margin: 20px auto 0 auto;
+    width: 1240px;
+    height: 415px;
+    position: relative;
+    @media all and (max-width: v.$bodyScale) {
+        height: 320px;
+        width: 90%;
+    }
+    @media all and (max-width: v.$tablet) {
+        height: 290px;
+    }
+    @media all and (max-width: v.$mobileL) {
+        margin-top: 27px;
+        height: 255px;
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+        @media all and (max-width: v.$bodyScale) {
+            border-radius: 20px;
+        }
+        @media all and (max-width: v.$tablet) {
+            border-radius: 15px;
+        }
+        @media all and (max-width: v.$mobileL) {
+            border-radius: 10px;
+        }
+    }
+    &__rightArrow {
+        right: 5px;
+        transform: rotate(-90deg);
+        @include m.carouselArrowStyle;
+        @media all and (max-width: v.$bodyScale) {
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            width: 40px;
+            right: 0;
+        }
+        @media all and (max-width: v.$tablet) {
+            width: 35px;
+        }
+        @media all and (max-width: v.$mobileL) {
+            width: 22px;
+        }
+    }
+    &__leftArrow {
+        left: 5px;
+        transform: rotate(90deg);
+        @include m.carouselArrowStyle;
+        @media all and (max-width: v.$bodyScale) {
+            left: 0px;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            width: 40px;
+        }
+        @media all and (max-width: v.$tablet) {
+            width: 35px;
+        }
+        @media all and (max-width: v.$mobileL) {
+            width: 22px;
+        }
+    }
+    &__counter {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        font-size: 18px;
+        color: v.$color-white;
+        @media all and (max-width: v.$bodyScale) {
+        }
+        @media all and (max-width: v.$tablet) {
+        }
+        @media all and (max-width: v.$mobileL) {
+            display: none;
+        }
+    }
+}

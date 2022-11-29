@@ -6,15 +6,6 @@ import FullStarIcon from "../assets/Etoile-pleine.svg";
 // Importation de l'icone étoile vide
 import EmptyStarIcon from "../assets/Etoile-vide.svg";
 
-// Importation de styled-components
-import styled from "styled-components";
-
-// Importation de mon objet pour les couleurs
-import color from "../styles/color";
-
-// Importation de mon objet pour les mediaQueries
-import { devices } from "../styles/mediaQueries";
-
 const LogementBody = ({ oneHousingData }) => {
     // Création d'un tableau pour séparer le Nom et le Prenom de la personne
     const name = oneHousingData.host.name.split(" ");
@@ -27,203 +18,73 @@ const LogementBody = ({ oneHousingData }) => {
     let i = 1;
     while (i <= 5) {
         i <= oneHousingData.rating
-            ? starDisplay.push(<Star src={FullStarIcon} key={i}></Star>)
-            : starDisplay.push(<Star src={EmptyStarIcon} key={i}></Star>);
+            ? starDisplay.push(
+                  <img
+                      className="logementBodyContainer__rightContainer__starContainer__img"
+                      src={FullStarIcon}
+                      alt={i}
+                      key={i}
+                  />
+              )
+            : starDisplay.push(
+                  <img
+                      className="logementBodyContainer__rightContainer__starContainer__img"
+                      src={EmptyStarIcon}
+                      alt={i}
+                      key={i}
+                  />
+              );
         i++;
     }
 
     return (
-        <TopContainer>
+        <section className="logementBodyContainer">
             {/* Container des infos de gauche */}
-            <TopLeftContainer>
-                <TitleH1>{oneHousingData.title}</TitleH1>
-                <LocationP>{oneHousingData.location}</LocationP>
+            <div className="logementBodyContainer__leftContainer">
+                <h1 className="logementBodyContainer__leftContainer__h1">
+                    {oneHousingData.title}
+                </h1>
+                <p className="logementBodyContainer__leftContainer__p">
+                    {oneHousingData.location}
+                </p>
                 {/* Container des Tags */}
-                <TagsContainer>
+                <div className="logementBodyContainer__leftContainer__tagsContainer">
                     {oneHousingData.tags.map((unTag, index) => (
-                        <TagsP key={unTag + index}>{unTag}</TagsP>
+                        <p
+                            className="logementBodyContainer__leftContainer__tagsContainer__text"
+                            key={unTag + index}
+                        >
+                            {unTag}
+                        </p>
                     ))}
-                </TagsContainer>
-            </TopLeftContainer>
+                </div>
+            </div>
             {/* Container des infos de droite */}
-            <TopRightContainer>
-                <HostContainer>
+            <div className="logementBodyContainer__rightContainer">
+                <div className="logementBodyContainer__rightContainer__hostContainer">
                     {/* Nom / Prénom */}
-                    <NameContainer>
-                        <FirstNameP>{name[0]}</FirstNameP>
-                        <LastNameP>{name[1]}</LastNameP>
-                    </NameContainer>
+                    <div className="logementBodyContainer__rightContainer__hostContainer__nameContainer">
+                        <p className="logementBodyContainer__rightContainer__hostContainer__nameContainer__firstName">
+                            {name[0]}
+                        </p>
+                        <p className="logementBodyContainer__rightContainer__hostContainer__nameContainer__lastName">
+                            {name[1]}
+                        </p>
+                    </div>
                     {/* image profil */}
-                    <HostPicture
+                    <img
+                        className="logementBodyContainer__rightContainer__hostContainer__img"
                         src={oneHousingData.host.picture}
                         alt={pictureAlt}
                     />
-                </HostContainer>
+                </div>
                 {/* Container étoiles */}
-                <StarContainer>{starDisplay}</StarContainer>
-            </TopRightContainer>
-        </TopContainer>
+                <div className="logementBodyContainer__rightContainer__starContainer">
+                    {starDisplay}
+                </div>
+            </div>
+        </section>
     );
 };
 
 export default LogementBody;
-
-const TopContainer = styled.section`
-    width: 1240px;
-    margin: 24px auto 0 auto;
-    display: flex;
-    justify-content: space-between;
-    @media ${devices.bodyScale} {
-        width: 90%;
-    }
-    @media ${devices.tablet} {
-        margin-top: 10px;
-        flex-direction: column;
-    }
-    @media ${devices.mobileL} {
-        margin-top: 1px;
-    }
-`;
-
-const TopLeftContainer = styled.div`
-    margin-top: 10px;
-    @media ${devices.bodyScale} {
-        max-width: 78%;
-    }
-    @media ${devices.tablet} {
-        max-width: 100%;
-    }
-`;
-
-const TopRightContainer = styled.div`
-    margin-right: 1px;
-    @media ${devices.tablet} {
-        margin-top: 16px;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: space-between;
-    }
-`;
-
-const TitleH1 = styled.h1`
-    font-size: 36px;
-    color: ${color.primary};
-    @media ${devices.bodyScale} {
-        font-size: 30px;
-    }
-    @media ${devices.tablet} {
-        font-size: 24px;
-    }
-    @media ${devices.mobileL} {
-        font-size: 18px;
-    }
-`;
-
-const LocationP = styled.p`
-    margin-top: 5px;
-    font-size: 18px;
-    color: ${color.primary};
-    @media ${devices.mobileL} {
-        font-size: 14px;
-        margin-top: 10px;
-    }
-`;
-
-const TagsContainer = styled.div`
-    margin-top: 22px;
-    display: flex;
-    @media ${devices.tablet} {
-        flex-wrap: wrap;
-        margin-right: 10px;
-    }
-    @media ${devices.mobileL} {
-        margin-top: 0px;
-    }
-`;
-
-const TagsP = styled.p`
-    font-size: 14px;
-    color: ${color.white};
-    background-color: ${color.primary};
-    padding: 4px 30px 3px 30px;
-    min-width: 115px;
-    text-align: center;
-    border-radius: 10px;
-    margin: auto 10px auto 0;
-    @media ${devices.tablet} {
-        margin: 10px 10px 0 0;
-        min-width: 84px;
-    }
-    @media ${devices.mobileL} {
-        padding: 3px 5px 3px 5px;
-        border-radius: 5px;
-        font-size: 10px;
-    }
-`;
-
-const HostContainer = styled.div`
-    display: flex;
-    justify-content: end;
-`;
-
-const NameContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-right: 10px;
-`;
-
-// Variable pour le style Nom et Prenom
-const BaseName = {
-    color: color.primary,
-    fontSize: "18px",
-    textAlign: "end",
-};
-
-const FirstNameP = styled.p`
-    margin-bottom: 2px;
-    ${BaseName}
-    @media ${devices.mobileL} {
-        font-size: 12px;
-    }
-`;
-
-const LastNameP = styled.p`
-    margin-top: 2px;
-    ${BaseName}
-    @media ${devices.mobileL} {
-        font-size: 12px;
-    }
-`;
-
-const HostPicture = styled.img`
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    background-color: ${color.grey};
-    margin: 0;
-    @media ${devices.mobileL} {
-        margin: auto;
-        width: 32px;
-        height: 32px;
-    }
-`;
-
-const StarContainer = styled.div`
-    margin: auto 0 auto 0;
-`;
-
-const Star = styled.img`
-    margin-top: 19px;
-    margin-left: 4px;
-    @media ${devices.bodyScale} {
-        margin: auto;
-        width: 30px;
-        height: 30px;
-    }
-    @media ${devices.mobileL} {
-        margin: 2px auto -2px auto;
-        width: 17px;
-        height: 17px;
-    }
-`;

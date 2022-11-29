@@ -1,0 +1,61 @@
+@use "../1-Utils/variables" as v;
+
+.header {
+    width: 1240px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px auto 0 auto;
+    @media all and (max-width: v.$bodyScale) {
+        width: 90%;
+        margin-top: 20px;
+    }
+    @media all and (max-width: v.$tablet) {
+        margin-top: 30px;
+    }
+    @media all and (max-width: v.$mobileL) {
+        margin-top: 20px;
+    }
+    &__logo {
+        width: 210px;
+        height: 68px;
+        margin-left: 2px;
+        @media all and (max-width: v.$tablet) {
+            width: 150px;
+            height: auto;
+            margin-left: 0px;
+        }
+        @media all and (max-width: v.$mobileL) {
+            width: 145px;
+            height: 47px;
+            margin-left: 0px;
+        }
+    }
+    &__ul {
+        display: flex;
+        &__anchor {
+            &__li {
+                color: v.$color-primary;
+                font-size: 24px;
+                margin-left: 57px;
+                @media all and (max-width: v.$bodyScale) {
+                }
+                @media all and (max-width: v.$tablet) {
+                    font-size: 17px;
+                    margin-left: 28px;
+                }
+                @media all and (max-width: v.$mobileL) {
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    margin-left: 20px;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}
+
+.active {
+    text-decoration: underline;
+    color: v.$color-primary;
+}

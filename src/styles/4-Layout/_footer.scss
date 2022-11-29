@@ -1,0 +1,33 @@
+@use "../1-Utils/variables" as v;
+
+.footer {
+    height: 209px;
+    background-color: v.$color-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media all and (max-width: v.$tablet) {
+        width: 100%;
+    }
+    &__logo {
+        width: 122px;
+        height: 39px;
+        margin-top: 62px;
+    }
+    &__text {
+        margin-top: 45px;
+        font-size: 24px;
+        color: v.$color-white;
+        @media all and (max-width: v.$bodyScale) {
+            font-size: 20px;
+        }
+        @media all and (max-width: v.$tablet) {
+            font-size: 18px;
+        }
+        @media all and (max-width: v.$mobileL) {
+            height: 209px;
+            margin-top: 30px;
+            font-size: 12px;
+        }
+    }
+}

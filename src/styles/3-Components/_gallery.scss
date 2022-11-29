@@ -1,0 +1,36 @@
+@use "../1-Utils/variables" as v;
+
+.galleryContainer {
+    width: 1240px;
+    margin: 43px auto 50px auto;
+    padding: 1px;
+    border-radius: 25px;
+    background-color: v.$color-grey;
+    @media all and (max-width: v.$bodyScale) {
+        background-color: v.$color-white;
+        padding: 0px;
+        margin: 30px auto 0 auto;
+        width: 90%;
+    }
+    @media all and (max-width: v.$mobileL) {
+        margin: 22px auto 22px auto;
+    }
+    &__gridContainer {
+        margin: 56px auto 56px auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px 60px;
+        width: 1140px;
+        border-radius: 25px;
+        align-content: center;
+        @media all and (max-width: v.$bodyScale) {
+            margin: 22px auto 22px auto;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            gap: 20px;
+        }
+        @media all and (max-width: v.$tablet) {
+            grid-template-columns: 1fr;
+        }
+    }
+}
