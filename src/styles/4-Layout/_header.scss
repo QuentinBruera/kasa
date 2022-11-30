@@ -38,8 +38,6 @@
                 color: v.$color-primary;
                 font-size: 24px;
                 margin-left: 57px;
-                @media all and (max-width: v.$bodyScale) {
-                }
                 @media all and (max-width: v.$tablet) {
                     font-size: 17px;
                     margin-left: 28px;

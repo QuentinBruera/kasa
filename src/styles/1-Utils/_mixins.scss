@@ -20,3 +20,19 @@
     font-size: 18px;
     text-align: end;
 }
+
+@mixin littleCollapseContent {
+    background-color: v.$color-grey;
+    border-radius: 0 0 5px 5px;
+    margin-top: -10px;
+    width: 582px;
+    padding: 40px 12px 27px 20px;
+    min-height: 229px;
+    font-size: 18px;
+}
+
+@mixin littleCollapseContent-tablet {
+    font-size: 16px;
+    padding: 28px 6px 3px 13px;
+    min-height: 0;
+}

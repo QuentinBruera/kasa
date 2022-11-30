@@ -1,6 +1,7 @@
 @use "./2-Base/base";
 @use "./2-Base/typography";
 
+@use "./3-Components/_littleCollapse";
 @use "./3-Components/bannerHome";
 @use "./3-Components/bannerPropos";
 @use "./3-Components/card";
@@ -8,11 +9,7 @@
 @use "./3-Components/errorBody";
 @use "./3-Components/gallery";
 @use "./3-Components/logementBody";
+@use "./3-Components/proposBody";
 
 @use "./4-Layout/header";
 @use "./4-Layout/footer";
-
-@use "./5-Pages/home";
-@use "./5-Pages/logement";
-@use "./5-Pages/propos";
-@use "./5-Pages/error";
